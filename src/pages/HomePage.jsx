@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-[#f4e6d5] text-gray-800">
       {/* HERO SECTION */}
@@ -11,10 +13,17 @@ const HomePage = () => {
           <p className="mb-6 text-xl">Quality Agarbatti at Best Prices!</p>
 
           <div className="space-x-4">
-            <button className="bg-[#f8d7a3] text-black px-6 py-2 rounded shadow">
+            <button
+              onClick={() => navigate("/products")}
+              className="bg-[#f8d7a3] text-black px-6 py-2 rounded shadow"
+            >
               View Products
             </button>
-            <button className="bg-[#8c5a3c] px-6 py-2 rounded shadow">
+
+            <button
+              onClick={() => navigate("/wholesale")}
+              className="bg-[#8c5a3c] px-6 py-2 rounded shadow"
+            >
               Wholesale Inquiry
             </button>
           </div>
