@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
   const navigate = useNavigate();
+
   return (
     <div className="bg-[#f4e6d5] text-gray-800">
       {/* HERO SECTION */}
