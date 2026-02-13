@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import heroImage from "../assets/incense.jpg";
 const HomePage = () => {
   const navigate = useNavigate();
 
@@ -31,7 +31,11 @@ const HomePage = () => {
         </div>
 
         <div className="mt-10 md:mt-0">
-          <div className="w-2xl h-60 bg-white rounded shadow-md"></div>
+          <img
+            src={heroImage}
+            alt="Incense Sticks"
+            className="w-125 h-60 object-cover rounded shadow-md"
+          />
         </div>
       </section>
 
@@ -39,7 +43,11 @@ const HomePage = () => {
       <section className="px-8 py-16 grid md:grid-cols-2 gap-10">
         {/* 12 Pouch Pack */}
         <div className="bg-white p-8 rounded-xl shadow-md text-center">
-          <div className="h-40 bg-gray-200 rounded mb-6"></div>
+          <img
+            src="https://5.imimg.com/data5/CW/JG/MY-4429138/color-agarbatti-incense-stick-1000x1000.jpg"
+            alt="Color Agarbatti Sticks"
+            className="h-60 w-full object-cover rounded mb-6"
+          />
           <h3 className="text-2xl font-bold mb-2">12 Pouch Pack</h3>
           <p className="mb-2">12 x ₹5 Pouches</p>
           <p className="text-red-600 font-bold mb-4">
@@ -52,7 +60,11 @@ const HomePage = () => {
 
         {/* Mutha Bundle */}
         <div className="bg-white p-8 rounded-xl shadow-md text-center">
-          <div className="h-40 bg-gray-200 rounded mb-6"></div>
+          <img
+            src="https://5.imimg.com/data5/CW/JG/MY-4429138/color-agarbatti-incense-stick-1000x1000.jpg"
+            alt="Color Agarbatti Sticks"
+            className="h-60 w-full object-cover rounded mb-6"
+          />
           <h3 className="text-2xl font-bold mb-2">Mutha Bundle Pack</h3>
           <p className="mb-2">10 x ₹10 Muthas</p>
           <p className="text-red-600 font-bold mb-4">
@@ -102,13 +114,38 @@ const HomePage = () => {
         <h2 className="text-3xl font-bold mb-10">Popular Fragrances</h2>
 
         <div className="grid md:grid-cols-4 gap-6">
-          {["Rose", "Sandalwood", "Lavender", "Jasmine"].map((item) => (
+          {[
+            {
+              name: "Rose",
+              image:
+                "https://images.unsplash.com/photo-1518895949257-7621c3c786d7",
+            },
+            {
+              name: "Sandalwood",
+              image:
+                "https://images.unsplash.com/photo-1602928321679-560bb453f190",
+            },
+            {
+              name: "Lavender",
+              image:
+                "https://images.unsplash.com/photo-1501004318641-b39e6451bec6",
+            },
+            {
+              name: "Jasmine",
+              image:
+                "https://images.unsplash.com/photo-1599148401005-fe6d7497cb5e",
+            },
+          ].map((item) => (
             <div
-              key={item}
-              className="bg-white shadow-md rounded-xl overflow-hidden"
+              key={item.name}
+              className="bg-white shadow-md rounded-xl overflow-hidden hover:scale-105 transition duration-300"
             >
-              <div className="h-40 bg-gray-200"></div>
-              <div className="py-4 font-semibold">{item}</div>
+              <img
+                src={`${item.image}?auto=format&fit=crop&w=500&q=80`}
+                alt={item.name}
+                className="h-80 w-full object-fill"
+              />
+              <div className="py-4 font-semibold">{item.name}</div>
             </div>
           ))}
         </div>
