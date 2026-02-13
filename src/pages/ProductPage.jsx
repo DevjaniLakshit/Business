@@ -30,12 +30,9 @@ const products = [
 const ProductPage = () => {
   return (
     <div className="px-8 py-16 bg-[#f4e6d5] min-h-screen">
-      
       {/* Page Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#4b2e2e] mb-4">
-          Our Products
-        </h2>
+        <h2 className="text-4xl font-bold text-[#4b2e2e] mb-4">Our Products</h2>
         <p className="text-gray-600">
           Premium Quality Incense Sticks at Wholesale Prices
         </p>
@@ -49,16 +46,18 @@ const ProductPage = () => {
             className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
           >
             {/* Product Image Placeholder */}
-            <div className="h-52 bg-gray-200"></div>
+            <img
+              src="https://5.imimg.com/data5/CW/JG/MY-4429138/color-agarbatti-incense-stick-1000x1000.jpg"
+              alt={product.name}
+              className="h-52 w-full object-cover"
+            />
 
             {/* Product Details */}
             <div className="p-6 text-center">
               <h3 className="text-2xl font-bold text-[#6d3f2b] mb-2">
                 {product.name}
               </h3>
-              <p className="text-gray-600 mb-3">
-                {product.description}
-              </p>
+              <p className="text-gray-600 mb-3">{product.description}</p>
               <p className="text-red-600 font-bold mb-4">
                 Wholesale Price: {product.price}
               </p>

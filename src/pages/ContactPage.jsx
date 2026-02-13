@@ -20,8 +20,8 @@ const ContactPage = () => {
           </h3>
 
           <div className="space-y-4 text-gray-700">
-            <p>📍 Address: Your City, India</p>
-            <p>📞 Phone: +91 XXXXX XXXXX</p>
+            <p>📍 Address: Ajmer Rajasthan, India</p>
+            <p>📞 Phone: +91 9664280423</p>
             <p>✉ Email: info@seemagold.com</p>
             <p>🕒 Business Hours: Mon - Sat (9 AM - 7 PM)</p>
           </div>
